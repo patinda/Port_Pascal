@@ -85,7 +85,7 @@ const toggleMenu = () => {
 
 // Navigation items
 const menuItems = [
-  { id: 1, href: '#home', text: 'header.home', icon: 'uil uil-estate', active: true },
+  { id: 1, href: '', text: 'header.home', icon: 'uil uil-estate'},
   { id: 2, href: '#about', text: 'header.about', icon: 'uil uil-user' },
   { id: 3, href: '#skills', text: 'header.skills', icon: 'uil uil-file-alt' },
   { id: 4, href: '#services', text: 'header.services', icon: 'uil uil-briefcase' },
