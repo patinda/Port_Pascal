@@ -10,10 +10,7 @@ export default defineNuxtConfig({
     langDir: "locales", 
     strategy: "prefix_except_default",
   },
-  css: [
-    'assets/css/swiper-bundle.min.css',
-    'assets/css/styles.css',
-  ],
+  
   app: {
     head: {
       link: [
@@ -32,6 +29,10 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://res.cloudinary.com/dkztnapze/raw/upload/v1734475901/portfolio/styles_zwxl2s.css',
         },
         
       ],
