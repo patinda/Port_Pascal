@@ -95,7 +95,7 @@ const menuItems = [
 
 // Initialisation
 onMounted(() => {
-  const savedLang = localStorage.getItem('language') || 'en';
+  const savedLang = localStorage.getItem('language') || 'fr';
   changeLanguage(savedLang);
 });
 </script>
