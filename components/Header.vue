@@ -9,7 +9,7 @@
       <div class="nav__menu" :class="{ 'show-menu': showMenu }" id="nav-menu">
         <ul class="nav__list grid">
           <li v-for="item in menuItems" :key="item.id" class="nav__item">
-            <a :href="item.href" class="nav__link" :class="{ 'active-link': isActive(item) }">
+            <a :href="getLocalizedLink(item.href)" class="nav__link" :class="{ 'active-link': isActive(item) }">
               <i :class="item.icon" class="nav__icon"></i>{{ $t(item.text) }}
             </a>
           </li>
@@ -44,8 +44,7 @@
           :class="isDark ? 'uil-sun' : 'uil-moon'"
           @click="toggleTheme"
           id="theme-button"
-          ></i>
-
+        ></i>
 
         <!-- Menu Toggle -->
         <div class="nav__toggle" style="margin: 10px; font-size: 20px;" @click="toggleMenu" id="nav-toggle">
@@ -59,8 +58,9 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useRoute } from 'vue-router';
 
-// Changement de langue
+// Gestion de la langue
 const { locale } = useI18n();
 const currentLanguage = ref(locale.value);
 
@@ -85,7 +85,7 @@ const toggleMenu = () => {
 
 // Navigation items
 const menuItems = [
-  { id: 1, href: '', text: 'header.home', icon: 'uil uil-estate'},
+  { id: 1, href: '#', text: 'header.home', icon: 'uil uil-estate' },
   { id: 2, href: '#about', text: 'header.about', icon: 'uil uil-user' },
   { id: 3, href: '#skills', text: 'header.skills', icon: 'uil uil-file-alt' },
   { id: 4, href: '#services', text: 'header.services', icon: 'uil uil-briefcase' },
@@ -93,20 +93,25 @@ const menuItems = [
   { id: 6, href: '#contact', text: 'header.contact', icon: 'uil uil-message' },
 ];
 
+// Fonction pour obtenir le lien localisé
+const getLocalizedLink = (path) => {
+  const langPrefix = currentLanguage.value === 'fr' ? '/' : '/en';
+  return path.startsWith('#') ? `${langPrefix}${path}` : `${langPrefix}/${path}`;
+};
+
+// Vérification de lien actif
+const route = useRoute();
+const isActive = (link) => {
+  return route.hash === link.href || route.path === link.href;
+};
+
 // Initialisation
 onMounted(() => {
   const savedLang = localStorage.getItem('language') || 'fr';
   changeLanguage(savedLang);
 });
-
-const route = useRoute();
-const isActive = (link) => {
-  // Comparer la route actuelle avec le lien
-  return route.hash === link.href || route.path === link.href;
-};
 </script>
 
 <style scoped>
-
-
+/* Ajoutez ici vos styles */
 </style>

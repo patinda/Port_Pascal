@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "fr",
     langDir: "locales", 
-    strategy: "prefix_except_default",
   },
   
   app: {
