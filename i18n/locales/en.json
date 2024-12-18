@@ -1,0 +1,99 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "footer": {
+    "title": "Patinda Pascal KABORE",
+    "subtitle": "Full Stack Developer",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "copyright": "KABORE.P.Pascal. All rights reserved."
+  },
+  "home": {
+    "title": "Hello, I am Patinda Pascal KABORE",
+    "subtitle": "Full Stack Developer",
+    "description": " ",
+    "contact": "Contact Me",
+    "scroll": "Scroll down"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": " ",
+    "description": "Full Stack Developer, passionate about creating intuitive user interfaces and developing high-performing applications, I deliver quality solutions tailored to clients' needs.",
+    "download": "Download CV"
+  },
+  "skills": {
+    "title": "Technical skills",
+    "subtitle": " ",
+    "frameworks": { "title": "Frameworks and CMS" },
+    "databases": { "title": "Databases" },
+    "tools": { "title": "Development Tools" },
+    "methods": { "title": "Methodologies & Web Design" }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What I Offer",
+    "learnMore": "Learn More",
+    "uiux": {
+      "title": "UI/UX Design",
+      "detail1": "I develop modern and intuitive user interfaces.",
+      "detail2": "Creation and optimization of user experience (UX).",
+      "detail3": "Design of interactive elements for web applications.",
+      "detail4": "Improving your brand visibility with strategic design."
+    },
+    "frontend": {
+      "title": "Frontend Development",
+      "detail1": "Creation of responsive and high-performance web interfaces.",
+      "detail2": "Development with modern technologies like Nuxt.js and Vue.js.",
+      "detail3": "Performance optimization for smooth navigation.",
+      "detail4": "Collaboration with UX/UI teams for perfect integration."
+    },
+    "backend": {
+      "title": "Backend Development",
+      "detail1": "Development of robust backend systems with Laravel.",
+      "detail2": "Creation of secure and performant APIs.",
+      "detail3": "Management and optimization of MySQL and PostgreSQL databases.",
+      "detail4": "Integration with cloud services like Firebase."
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "My Recent Projects",
+    "viewSite": "View Site",
+    "viewDemo": "View Demo",
+    "videoNotSupported": "Your browser does not support video playback.",
+    "project1": {
+      "title": "Commission of Information and Freedoms of Burkina Faso",
+      "description": "Redesign proposal for the website of the Commission of Information and Freedoms of Burkina Faso"
+    },
+    "project2": {
+      "title": "DCLIC PRO BURKINA FASO FORUM",
+      "description": "Platform connecting learners of the DCLIC program with employers in Burkina Faso for OIF."
+    },
+    "project3": {
+      "title": "DCLIC Red Line Project",
+      "description": "Final project for a professional web and mobile development course."
+    },
+    "project4": {
+      "title": "LE GARAGE",
+      "description": "Platform for managing car rental services."
+    },
+    "project5": {
+      "title": "Forgelogistics",
+      "description": "Platform for managing heavy-duty vehicle parks."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's get in touch",
+    "phone": "Call Me",
+    "email": "Email",
+    "location": "Location"
+  }
+}
