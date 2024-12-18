@@ -9,7 +9,7 @@
       <div class="nav__menu" :class="{ 'show-menu': showMenu }" id="nav-menu">
         <ul class="nav__list grid">
           <li v-for="item in menuItems" :key="item.id" class="nav__item">
-            <a :href="item.href" class="nav__link" :class="{ 'active-link': item.active }">
+            <a :href="item.href" class="nav__link" :class="{ 'active-link': isActive(item) }">
               <i :class="item.icon" class="nav__icon"></i>{{ $t(item.text) }}
             </a>
           </li>
@@ -98,6 +98,12 @@ onMounted(() => {
   const savedLang = localStorage.getItem('language') || 'fr';
   changeLanguage(savedLang);
 });
+
+const route = useRoute();
+const isActive = (link) => {
+  // Comparer la route actuelle avec le lien
+  return route.hash === link.href || route.path === link.href;
+};
 </script>
 
 <style scoped>
